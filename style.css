@@ -1,54 +1,50 @@
-.headerContainer{
+.headContainer{
     display: flex;
-    height: 200px;
-    width: 90%;
-    margin: auto;
-    background-color: cyan;
+    height:200px;
+    width:90%;
+    margin:auto;
+    /* border: 2px solid cyan; */
 }
-.imgCont{
-    width: 23%;
-    height:100%;
-    /* background-color: red; */
-
-}
-.imgCont img{
-    width: 100%;
+.headContainer div:nth-child(1){
+    display: flex;
+    width: 25%;
+    /* background-color: green; */
     height: 100%;
 }
-.inputwish{
-    display: flex;
+.headContainer div:nth-child(1) img{
     width: 100%;
-    height:20%;
-    display: flex;
-    justify-content: right;
 }
-.wishlistico{
-    height: 100%;
-    padding: auto;
-    padding-top: 8px;
-    padding-right: 10px;
-    padding-left: 5px;
-}
-.wishlistico img{
-    height: 60%;
-    
-}
-.input{
-    /* background-color: red; */
+.headContainer div:nth-child(2){
+    display: grid;
+    /* border:2px solid red; */
     width: 100%;
-    display: flex;
-    justify-content: right;
+    grid-template-rows: repeat(2,1fr);
 }
-.input input{
-    width : 30%;
-    border: 2px solid #7C878E;
-    border-radius:none;
+.headContainer div:nth-child(2) div{
+    width : 100%
 }
 .input {
+    display: flex;
+    align-items: center;
     position: relative;
+    /* border: 2px solid black; */
+    border-radius:none;
+    width: 100%;
+    display: flex;
+    justify-content: right;
   }
-  
+  .input input{
+    width : 35%;
+    height : 35%;
+    border: 2px solid #7C878E;
+    border-radius:none;
+    margin-right: 10px;
+    font-weight: bolder;
+    color:#7C878E;
+    padding-left: 10px;
+}
   .input i {
+    margin-right: 75px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -61,12 +57,59 @@
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
-  }
-  .wishlist{
-    height: 100%;
-  }
-.hamburger{
-    height: 30px;
-    width: 200px;
-    background-color: red;
 }
+#resting{
+    /* border:1px solid brown; */
+    height:30%;
+    width:30px;
+    margin-right: 5px;
+}
+.categories{
+    display: flex;
+    /* flex-direction: column; */
+    /* border : 1px solid black; */
+    justify-content: right;
+    font-weight: 550;
+
+}
+.categories>div{
+    display:grid;
+    color:#333F48;
+    align-items: center;
+    /* background-color: red; */
+    grid-template-columns: repeat(7,1fr);
+}
+.categories>div>p{
+    margin: 10px;
+}
+.categories>div>p:nth-child(7){
+    color : #ED1703
+}
+#container2{
+    display: flex;
+    height: 72px;
+    /* border: 2px solid red; */
+    margin: auto;
+    width: 90%;
+    align-items: center;
+    vertical-align: middle;
+}
+.findStore{
+    width: 66%;
+    /* background-color: aqua; */
+}
+.findStore div{
+    display: flex;
+    height: 20px;
+}
+.reward{
+    display: flex;
+    width:33%;
+    height: 50%;
+    text-align: left;
+    color: #7C878E;
+    flex-direction: column;
+
+}
+
+
