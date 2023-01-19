@@ -81,6 +81,8 @@
 }
 .categories>div>p{
     margin: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 .categories>div>p:nth-child(7){
     color : #ED1703
@@ -111,5 +113,138 @@
     flex-direction: column;
 
 }
-
-
+.container3{
+    display: flex;
+    height : 90px;
+    /* background-color: cyan; */
+    width : 90%;
+    margin: auto;
+    justify-content: center;
+}
+.box{
+    background-color: #333F48;
+    width: 268px;
+    min-width: 268px;
+    margin-right: 8px;
+    margin-left: 8px;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+.box a:link { text-decoration: none; }
+.box a:visited { text-decoration: none; }
+.box a:hover { text-decoration: none; }
+.box a:active { text-decoration: none; }
+.box a{
+    color: white;
+    display: block;
+}
+.banner{
+    position: relative;
+    height: 445px;
+    /* background-color: cyan; */
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+.banner img{
+    height: 100%;
+    width: 100%;
+}
+.bannerBox{
+    position: absolute;
+    background-color: white;
+    /* border: 2px solid red; */
+    height: 80%;
+    width: 45%;
+    margin-left: 50%;
+    margin-top: 4%;
+}
+.bannerBox div{
+    padding-top: 15px;
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    /* background-color: cyan; */
+    margin-top: 3%;
+    text-align: center;
+}
+#bannerBoxCont{
+    display: grid;
+    height: 50%;
+    width: 90%;
+    /* background-color: #333F48; */
+    text-align: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+#bannerBoxCont a:link { text-decoration: underline; }
+#bannerBoxCont a:visited { text-decoration: none; }
+#bannerBoxCont a:hover { text-decoration: none; }
+#bannerBoxCont a:active { text-decoration: none; }
+#bannerBoxCont a{
+    color: black;
+    display: block;
+}
+#reebok{
+    display: flex;
+    width:90%;
+    height: 171px;
+    background-color: #DDBAD4;
+    margin: auto;
+    margin-top: 30px;
+}
+#reebok img{
+    width: 474px;
+    height: 130px;
+    margin: auto;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+#shopNow{
+    display: block;
+    text-align: center;
+    /* background-color: rgb(63, 11, 11); */
+    padding: 30px;
+    margin-right: 20%;
+    line-height: 30px;
+    font-size: larger;
+}
+#shopNow p{
+    font-weight: bolder;
+    color: white;
+}
+#small{
+    font-size: small;
+}
+#shopNow a{
+    text-decoration: underline;
+    color: white;
+}
+#container4{
+    width: 90%;
+    /* background-color: red; */
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+}
+#container5{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    /* background-color: red; */
+    justify-content: space-around;
+}
+.cont5Box{
+    text-align: center;
+    width:23%;
+    /* border: 1px solid black; */
+    height: 100%;
+}
+.cont5Box img{
+    width: 80%;
+}
+.cont5Box p{
+    font-size: large;
+    font-weight: bolder;
+}
