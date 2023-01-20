@@ -291,7 +291,6 @@
 }
 .bearproduct{
     display: flex;
-    border: 1px solid black;
     height: 450px;
     width: 90%;
     margin: auto;
@@ -403,3 +402,89 @@
 #cont10 img{
     width: 100%;
 }
+#gotta{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 200px;
+    justify-content: space-evenly;
+}
+#gotta div{
+    width: 16%;
+    height: 100%;
+}
+#gotta img{
+    width: 100%;
+}
+#rewards{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    height: 200px;
+    background-color: #D50032;
+
+}
+#rewards div{
+    /* border: 1px solid black; */
+    display: flex;
+}
+#rewards div:nth-child(1){
+    width: 25%;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#rewards div:nth-child(3){
+    width: 30%;
+}
+#rewards div:nth-child(2){
+
+    display: BLOCK;
+    justify-content: center;
+    color: white;
+    padding-top: 25px;
+    width: 45%;
+}
+#rewards div:nth-child(2) div:nth-child(1){
+    display: block;
+    /* background-color: yellow; */
+    width: 70%;
+    margin: auto;
+}
+#rewards div:nth-child(2) div:nth-child(2){
+    display: block;
+    /* background-color: yellow; */
+    width: 70%;
+    margin: auto;
+}
+#rewards div:nth-child(2) div img{
+    width: 120%;
+}
+#rewards div:nth-child(1) img{
+    width: 60%;
+}
+#rewards div:nth-child(3){
+    display: flex;
+}
+#rewards div:nth-child(3) div:nth-child(1){
+    background-color: white;
+    display: inline;
+    height: min-content;
+    padding: 10px;
+    margin-top: 25%;
+}
+#rewards div:nth-child(3) div:nth-child(1) a{
+    text-decoration: none;
+}
+#rewards div:nth-child(3) div:nth-child(2){
+    display: inline;
+    color: WHITE;
+    height: min-content;
+    padding: 10px;
+    margin-top: 25%
+}
+#rewards div:nth-child(3) div:nth-child(2) a{
+    color: WHITE;
+    font-weight: bolder;
+}
+
