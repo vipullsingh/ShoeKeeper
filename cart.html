@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShoeKeeper</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Kumbh Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      * {
+        font-family: "Kumbh Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/style.css" />
+  <body>
+    <div class="headContainer">
+      <div class="logo">
+        <img src="img\ShoeKeeper-logos.png" alt="" />
+      </div>
+      <div class="gridCont">
+        <div>
+          <div class="input">
+            <input type="text" placeholder="Find Something Famous For You" />
+            <i class="fa fa-search"></i>
+            <img
+              id="resting"
+              src="https://static.vecteezy.com/system/protected/files/001/187/989/vecteezy_heart_1187989.png"
+              alt=""
+            />
+            <a href="cart.html"><img id="resting" src="img\cart-icon-14.png" alt="" /></a>
+          </div>
+        </div>
+        <div class="categories">
+          <div>
+            <p>Women</p>
+            <p>Men</p>
+            <p>Kids</p>
+            <p>Brands</p>
+            <p>Accesories</p>
+            <p>Sale</p>
+            <p>🎊 Your Offers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div id="container2">
+      <div class="findStore">
+        <div>
+          <img src="img\3425077.png" alt="" />
+          <a href="#">Find a Store</a>
+        </div>
+      </div>
+      <div class="reward">
+        <div>Free Shipping for Rewards or Orders $75+</div>
+        <div>
+          <b><a href="register.html">SignIn/JoinUs</a></b>
+        </div>
+      </div>
+    </div>
+    <div id="cont11">
+      <div>
+        <div>
+          <p>Buy one, get 50% off boots</p>
+        </div>
+        <div>
+          <p>Exclusions apply</p>
+        </div>
+      </div>
+    </div>
+    <div id="total-item">
+      <p>Your Card (<span>0</span> Item)</p>
+    </div>
+    <!-- <div id="cart-items">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+    </div> -->
+    <div class="productContainer">
+      <div class="productSection">
+        <img src="img\70521_pair_medium.avif" alt="Product Image" />
+        <div class="productDetails">
+          <h3>Product Title</h3>
+          <p>Size: <span>8</span></p>
+          <p>Width: <span>Medium</span></p>
+          <p>Color: <span>Black</span></p>
+          <p>Price: $<span>120</span></p>
+          <p>Quantity: <input type="number" value="1" min="1" /></p>
+        </div>
+      </div>
+      <div class="productSection">
+        <img src="img\70521_pair_medium.avif" alt="Product Image" />
+        <div class="productDetails">
+          <h3>Product Title</h3>
+          <p>Size: <span>10</span></p>
+          <p>Width: <span>Wide</span></p>
+          <p>Color: <span>Brown</span></p>
+          <p>Price: $<span>160</span></p>
+          <p>Quantity: <input type="number" value="1" min="1" /></p>
+        </div>
+      </div>
+      <div class="productSection">
+        <img src="img\70521_pair_medium.avif" alt="Product Image" />
+        <div class="productDetails">
+          <h3>Product Title</h3>
+          <p>Size: <span>6</span></p>
+          <p>Width: <span>Narrow</span></p>
+          <p>Color: <span>Red</span></p>
+          <p>Price: $<span>100</span></p>
+          <p>Quantity: <input type="number" value="1" min="1" /></p>
+        </div>
+      </div>
+    </div>
+    <div class="totalContainer">
+      <p>Total: $<span id="total"></span></p>
+      <button id="checkoutBtn">Checkout</button>
+    </div>
+    <script>
+      // calculate total
+      function calculateTotal() {
+        let total = 0;
+        let products = document.querySelectorAll(".productSection");
+        products.forEach((product) => {
+          let price = parseFloat(product.querySelector("span").textContent);
+          let quantity = parseFloat(product.querySelector("input").value);
+          total += price * quantity;
+        });
+        document.querySelector("#total").textContent = total.toFixed(2);
+      }
+
+      // call calculateTotal function on page load
+      calculateTotal();
+
+      // call calculateTotal function on quantity change
+      let quantityInputs = document.querySelectorAll("input[type='number']");
+      quantityInputs.forEach((input) => {
+        input.addEventListener("change", calculateTotal);
+      });
+
+      // add event listener to checkout button
+      document.querySelector("#checkoutBtn").addEventListener("click", () => {
+        alert("Checkout button clicked!");
+      });
+    </script>
+  </body>
+</html>

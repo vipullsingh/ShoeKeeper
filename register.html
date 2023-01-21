@@ -67,28 +67,40 @@
         </div>
       </div>
     </div>
-    <div class="loginContainer">
-        <h2>Login</h2>
-        <form>
-          <label for="email">Email</label>
-          <input type="email" id="email" required>
-          <label for="password">Password</label>
-          <input type="password" id="password" required>
-          <input type="submit" value="Login">
-        </form>
-        <p>Don't have an account? <a href="register.html">Register</a></p>
-      </div>
-      <script>
+    <div class="registerContainer">
+      <h2>Register</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" required>
+        <input type="submit" value="Register">
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <script>
         // Get form element
-        let loginForm = document.querySelector("form");
+        let registerForm = document.querySelector("form");
       
         // Add submit event listener to form
-        loginForm.addEventListener("submit", e => {
+        registerForm.addEventListener("submit", e => {
           e.preventDefault();
       
-          // Get email and password input values
+          // Get name, email, password and confirm password input values
+          let name = document.querySelector("#name").value;
           let email = document.querySelector("#email").value;
           let password = document.querySelector("#password").value;
+          let confirmPassword = document.querySelector("#confirmPassword").value;
+      
+          // Validate name
+          if (!validateName(name)) {
+            alert("Please enter a valid name.");
+            return;
+          }
       
           // Validate email
           if (!validateEmail(email)) {
@@ -102,22 +114,45 @@
             return;
           }
       
-          // If email and password are valid, proceed with login
-          alert("Email and password are valid. Proceed with login.");
-        });
+          // Validate confirm password
+          if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+          }
       
-        // Email validation function
-        function validateEmail(email) {
-          let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-          return re.test(String(email).toLowerCase());
-        }
+          //
+      // You can use XMLHttpRequest, Fetch or jQuery AJAX to send data to server
+      // Example:
+      // var data = { name: name, email: email, password: password };
+      // var xhr = new XMLHttpRequest();
+      // xhr.open('POST', '/register');
+      // xhr.setRequestHeader('Content-Type', 'application/json');
+      // xhr.send(JSON.stringify(data));
+      alert("All form inputs are valid. Proceed with registration.");
       
-        // Password validation function
-        function validatePassword(password) {
-          let re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-          return re.test(password);
-        }
+      // Send data to server
+      // This is where you would send the data to your server for registration
+      });
+      
+      // Name validation function
+      function validateName(name) {
+      let re = /^[a-zA-Z ]{2,30}$/;
+      return re.test(name);
+      }
+      
+      // Email validation function
+      function validateEmail(email) {
+      let re = /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+      return re.test(String(email).toLowerCase());
+      }
+      
+      // Password validation function
+      function validatePassword(password) {
+      let re = /^(?=.[A-Za-z])(?=.\d)[A-Za-z\d]{8,}$/;
+      return re.test(password);
+      }
+      
       </script>
       
-      </body>
+  </body>
 </html>
