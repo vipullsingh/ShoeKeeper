@@ -24,7 +24,7 @@
   <body>
     <div class="headContainer">
       <div class="logo">
-        <img src="img\ShoeKeeper-logos.png" alt="" />
+        <a href="index.html"><img src="img\ShoeKeeper-logos.png" alt="" /></a>
       </div>
       <div class="gridCont">
         <div>
@@ -80,14 +80,6 @@
     <div id="total-item">
       <p>Your Card (<span>0</span> Item)</p>
     </div>
-    <!-- <div id="cart-items">
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-    </div> -->
     <div class="productContainer">
       <div class="productSection">
         <img src="img\70521_pair_medium.avif" alt="Product Image" />
@@ -110,6 +102,7 @@
           <p>Price: $<span>160</span></p>
           <p>Quantity: <input type="number" value="1" min="1" /></p>
         </div>
+        <button class="remove-btn" onclick="removeProduct()">Remove Product</button>
       </div>
       <div class="productSection">
         <img src="img\70521_pair_medium.avif" alt="Product Image" />
@@ -121,11 +114,12 @@
           <p>Price: $<span>100</span></p>
           <p>Quantity: <input type="number" value="1" min="1" /></p>
         </div>
+        <button class="remove-btn" onclick="removeProduct()">Remove Product</button>
       </div>
     </div>
     <div class="totalContainer">
       <p>Total: $<span id="total"></span></p>
-      <button id="checkoutBtn">Checkout</button>
+      <button id="checkoutBtn"><a style="text-decoration: none; color: white;" href="checkout.html">Checkout</a></button>
     </div>
     <script>
       // calculate total
